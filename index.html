@@ -1,65 +1,143 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>#TeamRobux</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>#TeamRobux</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #ffffff, #d0f0ff);
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffffcc;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #00b06b;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: #00b06b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #555;
+        }
+
+        .donation-total {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+
+        .donation-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .donation-buttons a {
+            padding: 1rem 2rem;
+            background-color: #00b06b;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .donation-buttons a:hover {
+            transform: scale(1.05);
+        }
+
+        .card {
+            background-color: #ffffffcc;
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            background-color: #f5f5f5;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>#TeamRobux</h1>
-        <p class="subtext">Raising 10,000 Robux to help 1,000 players who can't afford Robux!</p>
         <nav>
             <a href="#about">About Us</a>
         </nav>
     </header>
 
-    <section class="robux-counter">
-        <h2>Total Robux Raised: <span id="robuxTotal">0</span> 💸</h2>
-    </section>
+    <div class="container">
+        <div class="subtitle">Raising 10,000 Robux to help 1,000 people who can't afford to buy Robux.</div>
+        <div class="donation-total">Robux Raised: <strong>0</strong></div>
 
-    <section class="donation-section">
-        <h2>Donate Robux</h2>
-        <p>Choose how much you want to donate. You'll be redirected to Roblox to complete the donation via Gamepass.</p>
         <div class="donation-buttons">
-            <a href="https://www.roblox.com/game-pass/220625998" target="_blank">5 Robux</a>
-            <a href="https://www.roblox.com/game-pass/189843735/Small-amount-helps" target="_blank">10 Robux</a>
-            <a href="https://www.roblox.com/game-pass/1387087532/Small-amount-helps" target="_blank">20 Robux</a>
-            <a href="https://www.roblox.com/game-pass/717463636/This-helps-a-lot" target="_blank">50 Robux</a>
-            <a href="#" target="_blank">80 Robux</a>
-            <a href="#" target="_blank">100 Robux</a>
-            <a href="#" target="_blank">200 Robux</a>
-            <a href="#" target="_blank">500 Robux</a>
-            <a href="#" target="_blank">1000 Robux</a>
+            <a href="https://www.roblox.com/game-pass/220625998">Donate 5R</a>
+            <a href="https://www.roblox.com/game-pass/189843735/Small-amount-helps">Donate 10R</a>
+            <a href="https://www.roblox.com/game-pass/1387087532/Small-amount-helps">Donate 20R</a>
+            <a href="https://www.roblox.com/game-pass/717463636/This-helps-a-lot">Donate 50R</a>
         </div>
-    </section>
 
-    <section class="signup-section">
-        <h2>Sign Up</h2>
-        <p>Create a username to join #TeamRobux and appear in the live donation chart.</p>
-        <form>
-            <input type="text" placeholder="Enter your username">
-            <button type="submit">Sign Up</button>
-        </form>
-    </section>
+        <div class="card" id="about">
+            <h2>About Us</h2>
+            <p>#TeamRobux is a community initiative to help players who can’t afford Robux. We collect donations and distribute them fairly to those in need.</p>
+            <p>👤 Roblox User: <strong>Theproboy_3</strong></p>
+            <p>📧 Email: <strong>agameking539@gmail.com</strong></p>
+            <p>💬 Discord Server: <a href="https://discord.gg/x54bQx5VRZ">Join here</a></p>
+            <p>▶️ YouTube: <a href="https://www.youtube.com/@RbxRush9">RbxRush9</a></p>
+        </div>
 
-    <section class="live-chart">
-        <h2>Live Donation Chart</h2>
-        <p class="note">*You must sign up to appear on the live donation chart.</p>
-        <!-- Placeholder: chart would be populated dynamically -->
-        <div id="chart-placeholder">[Live Donation Chart Placeholder]</div>
-    </section>
+        <div class="card">
+            <h3>Sign Up</h3>
+            <p>Enter your username to join:</p>
+            <input type="text" placeholder="Username" />
+            <button>Sign Up</button>
+        </div>
 
-    <section id="about" class="about-section">
-        <h2>About #TeamRobux</h2>
-        <p>#TeamRobux is a movement to help underprivileged Roblox players get Robux through community support. 100% of donations go to real players who can't afford it.</p>
-        <ul>
-            <li>Roblox Username: <strong>Theproboy_3</strong></li>
-            <li>Email: <strong>agameking539@gmail.com</strong></li>
-            <li>Discord Server: <a href="https://discord.gg/x54bQx5VRZ" target="_blank">Join Here</a></li>
-            <li>YouTube: <a href="https://www.youtube.com/@RbxRush9" target="_blank">RbxRush</a></li>
-        </ul>
-    </section>
+        <div class="card">
+            <h3>Live Donation Chart</h3>
+            <p style="font-size: 0.9rem;">(Sign up first to see your name here)</p>
+            <p>[Donation Chart Placeholder]</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 #TeamRobux. Powered by RbxRush.
+    </footer>
+
 </body>
 </html>
